@@ -1,5 +1,6 @@
 # Netflix_Movies_TV_Show_Clustering
-![netflix](https://github.com/akeelrashid/Netflix_Movies_TV_Show_Clustering/assets/121357205/616acb83-11eb-416c-af5a-c18b88b87606)
+
+![netflix-netflix-startup](https://github.com/akeelrashid/Netflix_Movies_TV_Show_Clustering/assets/121357205/df5d6b04-bf89-49e8-82a9-b0e6e7685c2a)
 
 
 ## Problem Statement
