@@ -1,54 +1,75 @@
 # Netflix_Movies_TV_Show_Clustering
+![netflix-netflix-startup](https://github.com/akeelrashid/Netflix_Movies_TV_Show_Clustering/assets/121357205/e29d85f6-e98e-4bf3-b088-bc5de19c2f06)
 
-![netflix-netflix-startup](https://github.com/akeelrashid/Netflix_Movies_TV_Show_Clustering/assets/121357205/df5d6b04-bf89-49e8-82a9-b0e6e7685c2a)
-
+This repository contains the code and resources for analyzing the Netflix dataset of movies and TV shows until 2019. The dataset was sourced from the third-party search engine Flixable and includes information about various attributes of the content available on Netflix. The goal of this project is to uncover insights, trends, and patterns within the dataset and develop a content-based recommender system using natural language processing (NLP) techniques.
 
 ## Problem Statement
-This dataset consists of tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine.In 2018, they released an interesting report which shows that the number of TV shows on Netflix has nearly tripled since 2010. The streaming service’s number of movies has decreased by more than 2,000 titles since 2010, while its number of TV shows has nearly tripled. It will be interesting to explore what all other insights can be obtained from the same dataset.
+The problem at hand involves exploring the Netflix dataset to gain insights into the content available on the platform. The dataset provides information about movies and TV shows, their attributes, and their availability in different countries. By integrating this dataset with external sources such as IMDB ratings and Rotten Tomatoes, we can extract further valuable information.
 
-Integrating this dataset with other external datasets such as IMDB ratings, rotten tomatoes can also provide many interesting findings.
+The specific tasks to be performed in this project include:
+* Exploratory Data Analysis (EDA): Cleaned the data, unnested the Netflix content and tackled the null/missing values and conduct a thorough analysis of the dataset to uncover trends, patterns, and correlations among different attributes.
+* Understanding Content Availability: Determine the types of content available in different countries and identify any variations or preferences.
+* Analyzing Netflix's Focus: Investigate whether Netflix has been increasingly focusing on TV shows rather than movies in recent years.
+* Clustering Similar Content: Utilize text-based features to cluster similar content, enabling the development of a content-based recommender system.
 
-In this project you require to do
-1. Exploratory Data Analysis
+## Project Summary
 
-2. Understanding what type content is available in different countries
+# Netflix Content Analysis Project Summary
 
-3. Is Netflix has increasingly focusing on TV rather than movies in recent years.
-4. Clustering similar content by matching text-based features
+## Problem Statement:
 
-5. ## Project Summary
-6. I have been given a dataset which consists of **Tv shows and Movies available on netflix** as of 2019 which was collected from Flixable which is a third party netflix search engine.My task is to **explore** the data in order to find some useful insights.Try to understand what type of **content** is available in **different countries** and has to develop a **Clustering model** based on matching text-based Feature.The dataset provides us information regarding type of content whether **Tv shows or Movies** that has been added on Netflix.It provides information like **Title,Director,cast** of the Tv show/Movie and **Country** where Movie/Tv show was produced.When was it added on Netflix,what is the **release date,duration,rating and Description** of Movie/Tv Show.
+This project revolves around a dataset containing TV shows and movies available on Netflix as of 2019, collected from Flixable, a third-party Netflix search engine. In recent years, Netflix has experienced a significant shift, with the number of TV shows nearly tripling while the number of movies has decreased. The objective is to uncover valuable insights from this dataset and explore its potential integration with external datasets, such as IMDB ratings and Rotten Tomatoes.
 
-After importing the dataset in my colabnote book.it was find out that 
-the dataset consists of **7787** rows and **12** and the dataset **doesn't** contain any **duplicated** values but there are many features in dataset which **contains null** values like  **director** feature has maximum null vlaue around **30.68%**,followed by **cast 9.22%** ,**country 6.51%**,**date_added 0.13%** and **rating 0.09%**.I treated all the null values present in my dataframe,then i created some new column from the existing columns.
+## Project Summary:
+I aim of this project is to analyze a dataset containing TV shows and movies available on Netflix as of 2019, obtained from Flixable, a third-party Netflix search engine. The dataset comprises 7,787 rows and 12 columns, with no duplicate values. However, several features had missing values. The dataset provides valuable information about content type (TV show or movie), title, director, cast, country of production, date added to Netflix, release date, duration, rating, and description
 
-Then i performed **EDA** in order to find useful insights from the data and after that i performed **Textual Data Preprocessing** where i created new feature **filtered** using some important columns.Then i performed different method like **Lower casing**,**removed punctuations**,and **URLs**,**stops words**,**Lemmatization**,**Text Vectorization** and then performed Dimension reduction using **PCA**.
+The project follows a step-by-step process, as outlined below:
 
-After that i implemented **K-Means** and **Hierarchical Agglomerative** clustering to cluster the dataset based on similarity with **Sihouette score** as evaluation metrics.At the end i have Built a **Recommendation system** that can help in providing Netflix users personalized recommendations based on their similarity scores.
+###  Handling Missing Values:
+Address any null or missing values present in the dataset.
+### Dealing with Nested Columns: 
+Process nested columns such as director, cast, listed_in, and country to facilitate clear visualization and analysis.
+### Rating Binning: 
+Categorize ratings into appropriate categories, including adult, children's, family-friendly, and not rated content.
+### Exploratory Data Analysis (EDA): 
+Perform in-depth EDA on various attributes, uncovering valuable findings to aid in churn prevention.
+### Cluster Creation:
+Create clusters using attributes such as director, cast, country, genre, rating, and description. Tokenize, preprocess, and vectorize the attribute values using TF-IDF vectorizer.
+### Dimensionality Reduction:
+Reduce the dimensionality of the dataset using Principal Component Analysis (PCA) to improve performance.
+### Clustering Algorithms: 
+Employ K-Means Clustering and Agglomerative Hierarchical Clustering algorithms to construct two distinct types of clusters. Determine the optimal number of clusters using methods like the Elbow method, Silhouette score, and Dendrogram.
+### Content-Based Recommender System:
+Develop a content-based recommender system using the cosine similarity matrix. This system analyzes the user's watched shows and generates personalized recommendations to enhance their experience.
 
-## EDA Conclusion
+# EDA Conclusion
+- Movies account for approximately 69.1% of the content, while TV shows make up about 30.9%.
+- Content is primarily suitable for adults and teenagers, with no content rated for general audiences in TV shows.
+- Most movies have a duration of 90 to 120 minutes, and TV shows predominantly have a single season.
+- Content additions to Netflix increased significantly after 2015, with peaks in November 2019 for both TV shows and movies.
+- Content is frequently added on the 1st and 15th of each month.
+- There has been a consistent increase in content releases, particularly after 2008, with notable drops in 2018 and 2020.
+- International movies and TV shows are the most popular genres, followed by dramas and comedies.
+- The USA leads in content production, followed by India and the United Kingdom.
+- Notable directors include Jan Suter, Raul Campos, Jay Karas, Alastair Fothergill, and Ken Burns.
+- Famous cast members include Anupam Kher, Shah Rukh Khan, Naseeruddin Shah, Takahiro Sakurai, Yuki Kaji, and Daisuke Ono.
+- Most top countries produce adult-related content, except India, which produces more content suitable for teenagers.
+- Frequent words in descriptions include family, friend, life, find, two, take, world, woman, live, and love.
 
-* There are more  **Movie** realted content i,e around **69.1** and **Tv show** content is less i,e **30.9**  in the dataset
-* Most of the content in the Netflix is suitable for **Adults** and **Teenagers** and also in TV Show there is no content for **General Audience**
-* Most of the movies has duration of around **90 to 120 minutes** and most of the TV shows has only **1 Season**.
-* After **2015** large number of Tv Shows were added on the platform.In **Nov 2019** maximum Tv show content was added to the platform.
-* Similarly after **2015** large number of Movie content was added to the platform and in  **Nov 2019** maximum content was added.
-* On **1st** and **15th** of every month maximum content both TV shows and Movies was added to the platform
-* TV Show and Movie content release has been increased over years and after **2008** more number of movies and TV shows were released and it can be also seen that after **2018** and **2020** there were large drop in release of Movies and TV shows respectively
-* **Internation Movies and TV shows** are most popular genres in Tv show and 
- in Movies followed by **Dramas** and **Comedy**
-* **USA** is the top content Producing Country followed by **India** and **United Kingdom** in overall and also in **Movies** related Content
-* **USA** also produces more **TV series** followed by **United Kingdom**,**japan**
-* **Japan**,**South Korea** produces more **TV Shows** than **Movies**
-* **Jan Suter** followed by **Raul Campos,Jay Karas** has directed maximum Movies and **Alastair Fothergill** and **Ken Burns** has directed maximum TV Shows
-* **Anupam Kher**,**Shah Rukh Khan**,**Naseeruddin Shah** etc are famous Movie Cast and **Takahiro Sakurai, Yuki Kaji,Daisuke Ono** etc are famous TV Show cast
-*  Almost **all top countries** produced more **adult** related content except **india** produce more **Teenagers** content
-* It was seen that word like **family,friend,life,find,two take,worldwoman,woman,live,love** etc are most frequent words used in the description
+# ML Conclusion:
+- I implemented K-Means and Hierarchical Agglomerative clustering to cluster the dataset.
+- K-Means with 5 clusters was selected as the final model due to well-defined clusters and a high Silhouette score.
+- The Silhouette score served as the evaluation metric, indicating cluster quality.
+- Additionally, I developed a recommendation system for personalized content recommendations based on similarity scores.
 
-* ### ML Conclusion
 
-* I have implemented **K-Means** and **Hierarchical Agglomerative** clustering to cluster the dataset
-* I have consider **K-means** 5 optimal number of cluster as my final Model.K-means give me better result with well separated clusters and high Sihouette score,so K-means algorithm was able to effectively capture the underlying structure and patterns in the data
-* I have consider **Sihouette score** as my evaluation metrics.
-The Sihouette score gives us the measurement of how close each sample in one cluster and far from neighbouring cluster.It takes into account both the cohesion (similarity within a cluster) and the separation (dissimilarity between clusters) of the data points.Sihouette score ranges from (-1 to 1),a higher Silhouette score indicates better-defined and well-matched clusters, while a lower score suggests overlapping or poorly matched clusters
-* At the end i have Built a **Recommendation system** that can help in providing Netflix users personalized recommendations based on their similarity scores.
+
+
+
+
+
+
+
+
+
+
